@@ -1,0 +1,37 @@
+{
+  "name": "boilerplate-angular-component",
+  "version": "1.0.0",
+  "description": "An angular component boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "ify": "browserify $npm_package_main",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npm run ify -s > dist/${npm_package_name}.js",
+    "prebuild": "npm run clean",
+    "dist": "npm run build && npm run ify -s -- -t browserify-ngannotate | uglifyjs -c > dist/${npm_package_name}.min.js",
+    "predist": "npm run clean",
+    "publish": "npm run dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excellenteasy/boilerplate-angular-component.git"
+  },
+  "keywords": [
+    "angular",
+    "ng",
+    "directive"
+  ],
+  "author": "Stephan Bönnemann <stephan@excellenteasy.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/excellenteasy/boilerplate-angular-component/issues"
+  },
+  "homepage": "https://github.com/excellenteasy/boilerplate-angular-component",
+  "devDependencies": {
+    "browserify": "^7.0.0",
+    "browserify-ngannotate": "^0.4.0",
+    "uglifyjs": "^2.3.6",
+    "watchify": "^2.1.1"
+  }
+}
