@@ -6,10 +6,10 @@
   "scripts": {
     "ify": "browserify $npm_package_main",
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run ify -s > dist/${npm_package_name}.js",
     "prebuild": "npm run clean",
-    "dist": "npm run build && npm run ify -s -- -t browserify-ngannotate | uglifyjs -c > dist/${npm_package_name}.min.js",
-    "predist": "npm run clean",
+    "build": "npm run ify -s > dist/${npm_package_name}.js",
+    "predist": "npm run build",
+    "dist": "npm run ify -s -- -t browserify-ngannotate | uglifyjs -c > dist/${npm_package_name}.min.js",
     "publish": "npm run dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
