@@ -11,7 +11,7 @@
     "predist": "npm run build",
     "dist": "npm run ify -s -- -t browserify-ngannotate | uglifyjs -c > dist/${npm_package_name}.min.js",
     "publish": "npm run dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,8 @@
   "devDependencies": {
     "browserify": "^7.0.0",
     "browserify-ngannotate": "^0.4.0",
+    "tap-spec": "^2.1.1",
+    "tape": "^3.0.3",
     "uglify-js": "^2.4.16",
     "watchify": "^2.1.1"
   }
