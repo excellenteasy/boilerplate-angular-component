@@ -4,7 +4,7 @@
   "description": "An angular component boilerplate",
   "main": "index.js",
   "scripts": {
-    "ify": "browserify $npm_package_main",
+    "ify": "browserify $npm_package_main -t brfs",
     "clean": "rm -rf dist && mkdir dist",
     "prebuild": "npm run clean",
     "build": "npm run ify -s > dist/${npm_package_name}.js",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/excellenteasy/boilerplate-angular-component",
   "devDependencies": {
+    "brfs": "^1.2.0",
     "browserify": "^7.0.0",
     "browserify-ngannotate": "^0.4.0",
     "tap-spec": "^2.1.1",
