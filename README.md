@@ -1,6 +1,6 @@
 # The component pattern
 
-Credit goes to [Tero Parviainen](http://teropa.info/blog/2014/10/24/how-ive-improved-my-angular-apps-by-banning-ng-controller.html) for writing about this pattern.
+> Credit goes to [Tero Parviainen](http://teropa.info/blog/2014/10/24/how-ive-improved-my-angular-apps-by-banning-ng-controller.html) for writing about this pattern.
 
 ## Key principles are:
 
@@ -24,3 +24,15 @@ Avoid using `$scope` in your controllers to set values if possible. You can use 
 
 ### fs.readFileSync the template
 If your component has a template, then fs.readFileSync it. This is made possible by the browserify transform [brfs](https://github.com/substack/brfs).
+
+## Build process
+
+This boilerplate is build using npm scripts.
+
+`npm run serve` opens browser for development with livereload.
+
+`npm run dist` creates browserify bundles in `dist/` folder.
+
+`npm test` runs the tests.
+
+`npm run watch` executes `npm test` when `index.js` changes.
