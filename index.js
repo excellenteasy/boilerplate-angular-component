@@ -21,7 +21,7 @@ function directive() {
     restrict: 'ACE',
     controller: 'ComponentCtrl',
     controllerAs: 'ctrl',
-    template: fs.readFileSync('./template.html')
+    template: fs.readFileSync('./template.html', 'utf8')
   }
 }
 
