@@ -1,12 +1,12 @@
 'use strict';
+
 var fs = require('fs')
 
 exports = module.exports = function(module) {
-  module.controller('ComponentCtrl', ComponentCtrl)
   module.directive('component', directive)
 }
 
-exports.ctrl = ComponentCtrl
+exports.ctrl = ctrl
 exports.directive = directive
 
 if ('angular' in global) {
@@ -19,13 +19,13 @@ function directive() {
       items: '='
     },
     restrict: 'ACE',
-    controller: 'ComponentCtrl',
+    controller: ctrl,
     controllerAs: 'ctrl',
     template: fs.readFileSync('./template.html', 'utf8')
   }
 }
 
-function ComponentCtrl($scope) {
+function ctrl($scope) {
   this.items = $scope.items.map(function(item) {
     return item * 1000
   })
