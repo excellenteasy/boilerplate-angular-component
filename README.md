@@ -1,4 +1,8 @@
 # The component pattern
+[![Build Status](https://travis-ci.org/excellenteasy/boilerplate-angular-component.svg?branch=master)](https://travis-ci.org/excellenteasy/boilerplate-angular-component)
+[![Code Climate](https://codeclimate.com/github/excellenteasy/boilerplate-angular-component/badges/gpa.svg)](https://codeclimate.com/github/excellenteasy/boilerplate-angular-component)
+[![Dependency Status](https://david-dm.org/excellenteasy/boilerplate-angular-component.svg)](https://david-dm.org/excellenteasy/boilerplate-angular-component)
+[![devDependency Status](https://david-dm.org/excellenteasy/boilerplate-angular-component/dev-status.svg)](https://david-dm.org/excellenteasy/boilerplate-angular-component#info=devDependencies)
 
 > Credit goes to [Tero Parviainen](http://teropa.info/blog/2014/10/24/how-ive-improved-my-angular-apps-by-banning-ng-controller.html) for writing about this pattern.
 
