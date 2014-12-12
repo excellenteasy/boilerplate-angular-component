@@ -1,17 +1,14 @@
-let fs = require('fs')
+import {readFileSync} from 'fs'
 
-exports = module.exports = function(module) {
+export default function component(module) {
   module.directive('component', directive)
 }
 
-exports.ctrl = ctrl
-exports.directive = directive
-
 if ('angular' in global) {
-  exports(angular.module('component', []))
+  component(angular.module('component', []))
 }
 
-function directive() {
+export function directive() {
   return {
     scope: {
       items: '='
@@ -19,12 +16,10 @@ function directive() {
     restrict: 'ACE',
     controller: ctrl,
     controllerAs: 'ctrl',
-    template: fs.readFileSync(__dirname + '/template.html', 'utf8')
+    template: readFileSync(__dirname + '/template.html', 'utf8')
   }
 }
 
-function ctrl($scope) {
-  this.items = $scope.items.map(function(item) {
-    return item * 1000
-  })
+export function ctrl($scope) {
+  this.items = $scope.items.map(item => item * 1000)
 }
