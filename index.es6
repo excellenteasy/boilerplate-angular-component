@@ -1,6 +1,4 @@
-'use strict';
-
-var fs = require('fs')
+let fs = require('fs')
 
 exports = module.exports = function(module) {
   module.directive('component', directive)
