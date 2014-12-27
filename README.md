@@ -21,7 +21,7 @@ If a comComponents have a one-to-one correspondence with HTML templates.
 Beyond the original writeup of the component pattern, we can optimize even more.
 
 ### controllerAs
-Interally, the directive should always refer to its controller as `ctrl`. This creates reusable and more maintainable code.
+Internally, the directive should always refer to its controller as `ctrl`. This creates reusable and more maintainable code.
 
 ### avoid `$scope` in controller
 Avoid using `$scope` in your controllers to set values if possible. You can use `this.something = "value"` in controllers and refer to `ctrl.something` in your template. You will need to use `$scope` to access data handed to the isolate scope, though.
