@@ -1,6 +1,5 @@
 # The component pattern
 [![Build Status](https://travis-ci.org/excellenteasy/boilerplate-angular-component.svg?branch=master)](https://travis-ci.org/excellenteasy/boilerplate-angular-component)
-[![Code Climate](https://codeclimate.com/github/excellenteasy/boilerplate-angular-component/badges/gpa.svg)](https://codeclimate.com/github/excellenteasy/boilerplate-angular-component)
 [![Dependency Status](https://david-dm.org/excellenteasy/boilerplate-angular-component.svg)](https://david-dm.org/excellenteasy/boilerplate-angular-component)
 [![devDependency Status](https://david-dm.org/excellenteasy/boilerplate-angular-component/dev-status.svg)](https://david-dm.org/excellenteasy/boilerplate-angular-component#info=devDependencies)
 
