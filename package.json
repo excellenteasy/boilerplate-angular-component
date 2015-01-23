@@ -55,5 +55,10 @@
     "tape": "^3.0.3",
     "uglify-js": "^2.4.15",
     "watchify": "davidpfahler/watchify"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
   }
 }
